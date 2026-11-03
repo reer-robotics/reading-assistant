@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reading Room · REER</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">REER <span>/ READING ROOM</span></a><span class="local">● Local workspace · v0.1</span></header>
+<main>
+<section class="intro"><div><p class="eyebrow">WRITE WITH YOUR KNOWLEDGE CLOSE BY</p><h1>A second look.<br><em>A better source.</em></h1><p class="lede">Connect what you’re writing to what your team already knows.</p></div><aside class="scope"><strong>Your library first.</strong><p>Internal knowledge + curated external references.</p><span class="pill">Open-web discovery is off</span></aside></section>
+<section class="toolbar" aria-label="Recommendation controls">
+<button id="recommend" class="primary">Recommend now <span aria-hidden="true">↗</span></button>
+<label class="toggle"><input id="automatic" type="checkbox"> Automatic updates</label>
+<label class="interval">Every <select id="interval" aria-label="Update interval"><option value="30">30 seconds</option><option value="60" selected>60 seconds</option><option value="120">2 minutes</option><option value="300">5 minutes</option></select></label>
+<span id="mode" class="mode">Connecting…</span>
+</section>
+<div class="status-row"><p id="status" role="status" aria-live="polite">Loading the local example…</p><span id="stats"></span></div>
+<div class="workspace">
+<section class="writing panel" aria-labelledby="writing-title">
+<div class="panel-heading"><div><p class="eyebrow">01 / YOUR WRITING</p><h2 id="writing-title">Working draft</h2></div><div class="tabs"><button id="edit-tab" aria-pressed="false">Edit</button><button id="linked-tab" aria-pressed="true">Linked view</button></div></div>
+<p class="hint">Matching colors and P-numbers connect passages to reading cards. Colors identify passages, not evidence quality.</p>
+<label id="editor-label" class="sr-only" for="editor">Draft content</label><textarea id="editor" hidden maxlength="30000" spellcheck="true"></textarea>
+<div id="linked" aria-label="Draft passages"></div>
+<div class="draft-footer"><button id="load-demo" class="text-button">Load example</button><button id="download" class="text-button">Download Markdown</button><span id="word-count"></span></div>
+<details class="bibliography"><summary>Inserted source notes <span id="note-count">(0)</span></summary><p class="hint">Included in Markdown downloads. Verify each source before publication.</p><div id="notes"></div></details>
+<p class="privacy">This session stays in memory. Download your draft before closing or reloading.</p>
+</section>
+<section class="reading panel" aria-labelledby="reading-title">
+<div class="panel-heading"><div><p class="eyebrow">02 / ALONGSIDE YOUR DRAFT</p><h2 id="reading-title">Reading & citations</h2></div><span id="result-count" class="count">0</span></div>
+<div class="filters"><label>Passage <select id="passage-filter"><option value="all">All passages</option></select></label><label>Show <select id="kind-filter"><option value="all">All suggestions</option><option value="suggested_reading">Suggested reading</option><option value="possible_citation">Possible citations</option><option value="possible_conflict">Possible conflicts</option></select></label></div>
+<div id="stale" class="warning" hidden>Draft changed. Refresh recommendations before inserting a citation.</div>
+<div id="cards" aria-live="polite"><div class="empty"><span aria-hidden="true">◎</span><h3>Bring your sources into view.</h3><p>Choose “Recommend now” to find relevant passages in the supplied library.</p></div></div>
+<button id="restore" class="text-button" hidden>Restore dismissed suggestions</button>
+<p class="privacy">Suggestions support your judgment. They do not certify a claim or authorize a procedure.</p>
+</section>
+</div>
+<footer><span>REER / OPEN KNOWLEDGE TOOLS</span><span id="library-count"></span><a href="https://github.com/reer-robotics/reading-assistant" target="_blank" rel="noopener noreferrer">Source & contribution guide ↗</a></footer>
+</main>
+<dialog id="source-dialog"><div class="dialog-heading"><h2 id="source-title">Source</h2><button id="close-source" aria-label="Close source">Close</button></div><div id="source-body"></div></dialog>
+</body></html>

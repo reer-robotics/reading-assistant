@@ -1,0 +1,10 @@
+{
+  "id": "source-grounded-reading",
+  "version": 1,
+  "steps": ["capture", "retrieve", "rank", "assess", "validate", "display"],
+  "source_order": ["internal", "curated_external"],
+  "model_policy": "one-optional-local-ollama-model",
+  "automatic_retries": 0,
+  "open_web": false,
+  "human_actions": ["open", "copy", "insert", "dismiss"]
+}

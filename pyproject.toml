@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reer-reading-assistant"
+version = "0.1.0"
+description = "Source-grounded reading recommendations linked to draft passages"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["Flask>=3.1,<4", "httpx>=0.28,<1", "jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+readassist = "reading_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+reading_assistant = ["web/*", "schemas/*.json", "skills/*.json", "demo/*", "workflow.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

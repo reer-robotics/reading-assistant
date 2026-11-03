@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "DEMO-PICKUP", "title": "Pickup uncertainty trial notes", "origin": "internal",
+      "authors": ["Synthetic engineering team"], "issued": "2026", "version": "1",
+      "maturity": "observation", "url": "", "synthetic": true,
+      "access": ["demo"], "tags": ["AGV", "localization", "uncertainty", "pickup", "retries", "association", "causality"],
+      "passages": [{"id": "observations", "locator": "Observations, paragraph 1", "text": "Synthetic example: pickup retries were observed alongside localization uncertainty in a small trial. The association does not establish causality. Payload, lighting and container alignment were not controlled. No universal conclusion about failed pickups is justified by these notes."}]
+    },
+    {
+      "id": "DEMO-TRIAL", "title": "Planning a repeatable pickup comparison", "origin": "internal",
+      "authors": ["Synthetic methods group"], "issued": "2026", "version": "2",
+      "maturity": "peer_validated", "url": "", "synthetic": true,
+      "access": ["demo"], "tags": ["randomized", "trials", "replications", "pickup", "settings", "method"],
+      "passages": [{"id": "method", "locator": "Trial method, paragraph 1", "text": "Synthetic example: compare two pickup settings with repeated trials. Record the randomized run order, response, payload, lighting and alignment. Plan equal replications at each level. These notes propose a method and contain no experimental results."}]
+    },
+    {
+      "id": "DEMO-GOVERNANCE", "title": "Evidence maturity and operational approval", "origin": "internal",
+      "authors": ["Synthetic editorial group"], "issued": "2026", "version": "1",
+      "maturity": "approved", "url": "", "synthetic": true,
+      "access": ["demo"], "tags": ["observations", "procedures", "peer", "review", "supervisor", "production"],
+      "passages": [{"id": "roles", "locator": "Roles, paragraph 1", "text": "Synthetic policy example: peer review evaluates the evidence behind field observations. Supervisor approval authorizes operating procedures for production. Publication of an observation does not itself authorize a procedure. This is a demonstration policy, not an adopted company rule."}]
+    },
+    {
+      "id": "NIST-SCATTER", "title": "NIST/SEMATECH handbook: Scatter Plot", "origin": "curated_external",
+      "authors": ["NIST/SEMATECH"], "issued": "", "version": "curated excerpt accessed 2026-11-03",
+      "maturity": "external_reference", "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm", "synthetic": false,
+      "access": ["public"], "tags": ["association", "causality", "correlated", "uncertainty", "evidence", "scatter"],
+      "passages": [{"id": "causality", "locator": "Section 1.3.3.26, Causality Is Not Proved By Association", "text": "The scatter plot uncovers relationships in data. […] A scatter plot can never \"prove\" cause and effect"}]
+    },
+    {
+      "id": "NIST-RANDOM", "title": "NIST/SEMATECH handbook: Completely randomized designs", "origin": "curated_external",
+      "authors": ["NIST/SEMATECH"], "issued": "", "version": "curated excerpt accessed 2026-11-03",
+      "maturity": "external_reference", "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri331.htm", "synthetic": false,
+      "access": ["public"], "tags": ["randomized", "trials", "replications", "run", "order", "response", "level"],
+      "passages": [{"id": "assignment", "locator": "Section 5.3.3.1, opening paragraph", "text": "For completely randomized designs, the levels of the primary factor are randomly assigned to the experimental units."}]
+    }
+  ]
+}
